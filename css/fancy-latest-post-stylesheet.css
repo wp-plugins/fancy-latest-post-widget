@@ -1,0 +1,74 @@
+/*All the styles for the plugin*/
+#flp_post_container{
+margin-bottom: 25px;
+}
+
+#flp_post{
+padding: 5px;
+margin-bottom: 25px;
+border: 1px solid #000000;
+}
+
+#flp_img{
+text-align: center;
+}
+
+#flp_title{
+font-size: 16px;
+margin-top: 10px;
+margin-bottom: 10px;
+text-align: center;
+}
+
+#flp_title a{
+font-weight: bold;
+}
+
+#flp_post a{
+color: #000000;
+}
+
+#flp_content{
+text-align: center;
+padding: 5px;
+width: 100%;
+}
+
+#flp_content p{
+color: #000000;
+}
+
+#flp_button_container{
+text-align: center;
+
+}
+
+#flp_button_container a{
+border: 3px solid #000000;
+display: block;
+padding: 10px;
+font-size: 15px;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+#flp_button_container a:hover{
+text-decoration: none;
+}
+
+@media(max-width: 799px){
+#flp_post_container .horizontal{
+  width: 48%;
+  float: left;
+  margin-right: 10px;
+}
+}
+
+@media(min-width: 800px){
+#flp_post_container .horizontal{
+  width: 23%;
+  float: left;
+  margin-right: 10px;
+}
+}
+
