@@ -22,17 +22,21 @@ http://ianlunn.github.io/Hover/
 
 
 == Installation ==
-Unzip the downloaded fancy-latest-post-widget zip file
-Upload the fancy-latest-post-widget folder and its contents into the wp-content/plugins/ directory of your WordPress installation
-Activate Fancy Latest Posts Widget from Plugins page
-Implement
+1- Unzip the downloaded fancy-latest-post-widget zip file<br>
+2- Upload the fancy-latest-post-widget folder and its contents into the wp-content/plugins/ directory of your WordPress installation<br>
+3- Activate Fancy Latest Posts Widget from Plugins page<br>
+
+Implement<br>
 
 1) Go to the Appearance / Widgets tab and make new instance of this widget as many time as you wish.
 
 == Screenshots ==
-1. Settings Page: https://drive.google.com/file/d/0B3XvJYDpEbzUYk95Q19LZkFvVUU/edit?usp=drivesdk
-2. Sidebar View: https://drive.google.com/file/d/0B3XvJYDpEbzUUklEdURLUzVmaEU/edit?usp=drivesdk
-3. Content View: https://drive.google.com/file/d/0B3XvJYDpEbzUbnFMbWJmSUdINUk/edit?usp=drivesdk
+1. Settings Page:<br>
+<img src="http://i.imgur.com/EDI9j5E.png"></img><br>
+2. Sidebar View:<br>
+<img src="http://i.imgur.com/0pyZGf6.png"></img><br>
+3. Content View:<br>
+<img src="http://i.imgur.com/nIZFVeW.png"></img><br>
 
 == Changelog ==
 version 1.0: First Version of the plugin.
