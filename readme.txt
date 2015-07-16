@@ -19,6 +19,8 @@ So far the only plugin that allow you to add an animation to the post thumbnail,
 This plugin is highly open to customization, all the credit for the effects are going to Ian Lunn: 
 http://ianlunn.github.io/Hover/
 
+A demo of the plugin working in the sidebar here: http://juanmojicademosite.zz.mu/
+
 
 
 == Installation ==
