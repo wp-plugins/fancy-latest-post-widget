@@ -37,7 +37,8 @@ function flp_stylesheet() {
 
 /*JS/Jquery*/
 add_action( 'wp_enqueue_scripts', 'flp_js' );
-function flp_js(){ 
+function flp_js(){
+       wp_enqueue_script('jQuery', "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"); 
        wp_enqueue_script( 'flp_effects', plugins_url('/js/flp_effects.js', __FILE__) );
 }
 
