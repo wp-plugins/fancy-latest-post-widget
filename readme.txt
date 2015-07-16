@@ -1,13 +1,13 @@
 === Fancy Latest Post Widget  ===
 Contributors: Juan Mojica
-Tags: latest, post, fancy, post widget, post sidebar, post effects
+Tags: latest, post, fancy, post widget, post sidebar, post effects, latest posts, latest posts widget, post thumbnails, posts, posts widget, recent posts, widget, post animation, thumbnail animation
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7P44PGGFVKR6U
 Requires at least: 3.4
 Tested up to: 4.2.2
-Stable tag: 0.1
+Stable tag: 0.1.1
 License: GPLv2
 
-Display the latest post with Animated effects in your sidebar or content.
+Display the latest post with Featured Image, Excerpt and Read more button each one with Animated effects in your sidebar or content.
 
 == Description ==
 Display the latest post with Animated effects in your sidebar or content.
@@ -19,7 +19,7 @@ So far the only plugin that allow you to add an animation to the post thumbnail,
 This plugin is highly open to customization, all the credit for the effects are going to Ian Lunn: 
 http://ianlunn.github.io/Hover/
 
-A demo of the plugin working in the sidebar here: http://juanmojicademosite.zz.mu/
+Please find a demo of the plugin <a href="http://juanmojicademosite.zz.mu/">Here</a>
 
 
 
