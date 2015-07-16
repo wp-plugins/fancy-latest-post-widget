@@ -176,7 +176,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 				<?php while ($flp_post->have_posts()) { $flp_post->the_post(); ?>
 					<div class="post <?php echo $aligment ?>" id="flp_post">
 					<div class="<?php echo $showImageAnim ?>" id="flp_img"><a href="<?php echo get_permalink(); ?>">
-					<?php $image = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID) : '<div class="flp_no_img" id="flp_no_img"><img clas="" src='.plugins_url("/img/no_img.png", __FILE__).'><img></div>';
+					<?php $image = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID) : '<div class="flp_no_img" id="flp_no_img"><img clas="" src="wp-content/plugins/fancy-latest-post-widget/img/no_img.png"><img></div>';
 					echo $image; ?>
 					</div></a>
 					<h2 class="<?php echo $showTitleAnim ?>" id="flp_title"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
