@@ -509,6 +509,22 @@ var postaling = $("#flp_post").attr("class");
 	}
 /*End of Post Aligment*/
 
+/*CSS changes and Colors*/
+var titleColor = $('.titleColor').html();
+$("#flp_title a").css("color", "#"+titleColor);
+
+var contentColor = $('.contentColor').html();
+$("#flp_content p").css("color", "#"+contentColor);
+
+var buttonColor = $('.buttonColor').html();
+$("#flp_button_container a").css("color", "#"+buttonColor);
+$("#flp_button_container a").css("border-color", "#"+buttonColor);
+$("#flp_button_container a").hover(function(){
+	$("#flp_button_container a").css("color", "#"+buttonColor);
+});
+
+var borderColor = $('.borderColor').html();
+$("#flp_post_container .post").css("border-color", "#"+borderColor);
 });
 
 

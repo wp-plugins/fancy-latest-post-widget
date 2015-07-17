@@ -24,7 +24,10 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$instance['showTitleAnim'] = esc_sql($new_instance['showTitleAnim']);
 		$instance['showContentAnim'] = esc_sql($new_instance['showContentAnim']);
 		$instance['showButtonAnim'] = esc_sql($new_instance['showButtonAnim']);
-		
+		$instance['titleColor'] =  esc_sql($new_instance['titleColor']);
+		$instance['contentColor'] =  esc_sql($new_instance['contentColor']);
+		$instance['buttonColor'] =  esc_sql($new_instance['buttonColor']);
+		$instance['borderColor'] =  esc_sql($new_instance['borderColor']);
 		return $instance;
 }
  
@@ -40,6 +43,10 @@ class Fancy_Lates_Post_Widget extends WP_Widget
                 $showTitleAnim = esc_attr($instance['showTitleAnim']);
 		$showContentAnim = esc_attr($instance['showContentAnim']);
 		$showButtonAnim = esc_attr($instance['showButtonAnim']);
+		$titleColor = esc_attr($instance['titleColor']);
+		$contentColor = esc_attr($instance['contentColor']);
+		$buttonColor = esc_attr($instance['buttonColor']);
+		$borderColor = esc_attr($instance['borderColor']);
 	} else {
 		$title = '';
 		$numberOfPost = '';
@@ -52,6 +59,10 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$showTitleAnim = '';
 		$showContentAnim = '';
 		$showButtonAnim = '';
+		$titleColor = '';
+		$contentColor = '';
+		$buttonColor = '';
+		$borderColor = '';
 	}
 
   
@@ -104,9 +115,9 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		</div>
 		
 		<div class="anim_section">
-                <center><h3>ANIMATIONS</h3></center>
+                <center><h3>ANIMATION SETTINGS</h3></center>
 		<p  class="flp_img_anim">
-		<label for="<?php echo $this->get_field_id('showImageAnim'); ?>"><?php _e('Thumbnail Effect : ', 'Fancy_Lates_Post_Widget'); ?></label><br>		
+		<label for="<?php echo $this->get_field_id('showImageAnim'); ?>"><?php _e('Thumbnail Effect: ', 'Fancy_Lates_Post_Widget'); ?></label><br>		
 		<select id="<?php echo $this->get_field_id('showImageAnim'); ?>"  name="<?php echo $this->get_field_name('showImageAnim'); ?>">
 		        <?php $lenght = count($animArr); ?>
 			<?php for($x=0;$x<$lenght ;$x++): ?>
@@ -115,7 +126,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		</select>
                 </p>
 		<p class='flp_title_anim'>
-		<label for="<?php echo $this->get_field_id('showTitleAnim'); ?>"><?php _e('Tittle Effect : ', 'Fancy_Lates_Post_Widget'); ?></label><br>		
+		<label for="<?php echo $this->get_field_id('showTitleAnim'); ?>"><?php _e('Tittle Effect: ', 'Fancy_Lates_Post_Widget'); ?></label><br>		
 		<select id="<?php echo $this->get_field_id('showTitleAnim'); ?>"  name="<?php echo $this->get_field_name('showTitleAnim'); ?>">
 		        <?php $lenght = count($animArr); ?>
 			<?php for($x=0;$x<$lenght ;$x++): ?>
@@ -124,7 +135,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		</select>
                 </p>
 		<p class='flp_content_anim'>
-		<label for="<?php echo $this->get_field_id('showContentAnim'); ?>"><?php _e('Excerpt Effect : ', 'Fancy_Lates_Post_Widget'); ?></label><br>		
+		<label for="<?php echo $this->get_field_id('showContentAnim'); ?>"><?php _e('Excerpt Effect: ', 'Fancy_Lates_Post_Widget'); ?></label><br>		
 		<select id="<?php echo $this->get_field_id('showContentAnim'); ?>"  name="<?php echo $this->get_field_name('showContentAnim'); ?>">
 		        <?php $lenght = count($animArr); ?>
 			<?php for($x=0;$x<$lenght ;$x++): ?>
@@ -133,7 +144,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		</select>
                 </p>
 		<p class='flp_button_anim'>
-		<label for="<?php echo $this->get_field_id('showButtonAnim'); ?>"><?php _e('Button Effect : ', 'Fancy_Lates_Post_Widget'); ?></label><br>		
+		<label for="<?php echo $this->get_field_id('showButtonAnim'); ?>"><?php _e('Button Effect: ', 'Fancy_Lates_Post_Widget'); ?></label><br>		
 		<select id="<?php echo $this->get_field_id('showButtonAnim'); ?>"  name="<?php echo $this->get_field_name('showButtonAnim'); ?>">
 		        <?php $lenght = count($animArr); ?>
 			<?php for($x=0;$x<$lenght ;$x++): ?>
@@ -141,7 +152,26 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 			<?php endfor;?>
 		</select>
                 </p>
-		</div>			 
+		</div>
+		<div class="anim_section">
+                <center><h3>STYLING SETTINGS</h3></center>
+		<p class="flp_title_color">
+		<label for="<?php echo $this->get_field_id('titleColor'); ?>"><?php _e('Post Title Color:', 'Fancy_Lates_Post_Widget'); ?></label><br>
+	        <input class="color" id="titleColor" name="<?php echo $this->get_field_name('titleColor'); ?>"  value="<?php echo $titleColor; ?>" />
+		</p>
+		<p class="flp_content_color">
+		<label for="<?php echo $this->get_field_id('contentColor'); ?>"><?php _e('Post Excerpt Color:', 'Fancy_Lates_Post_Widget'); ?></label><br>
+	        <input class="color" id="contentColor" name="<?php echo $this->get_field_name('contentColor'); ?>"  value="<?php echo $contentColor; ?>" />
+		</p>
+		<p class="flp_button_color">
+		<label for="<?php echo $this->get_field_id('buttonColor'); ?>"><?php _e('Post Read More Button Color:', 'Fancy_Lates_Post_Widget'); ?></label><br>
+	        <input class="color" id="buttonColor" name="<?php echo $this->get_field_name('buttonColor'); ?>"  value="<?php echo $buttonColor; ?>" />
+		</p>
+		<p class="flp_border_color">
+		<label for="<?php echo $this->get_field_id('borderColor'); ?>"><?php _e('Post Border Color:', 'Fancy_Lates_Post_Widget'); ?></label><br>
+	        <input class="color" id="borderColor" name="<?php echo $this->get_field_name('borderColor'); ?>"  value="<?php echo $borderColor; ?>" />
+		</p>
+		</div>					 
 	<?php
 	} 
 
@@ -157,17 +187,21 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$showTitleAnim = $instance['showTitleAnim'];
 		$showContentAnim = $instance['showContentAnim'];
 		$showButtonAnim = $instance['showButtonAnim'];
+		$titleColor = $instance['titleColor'];
+		$contentColor = $instance['contentColor'];
+		$buttonColor = $instance['buttonColor'];
+		$borderColor = $instance['borderColor'];
 		echo $before_widget;
 		if ( $title ) {
 			echo $before_title . $title . $after_title;
 		}
-		$this->getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt, $aligment, $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim);
+		$this->getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt, $aligment, $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor);
                 echo $after_widget;
 	}
 
 
 
-	function getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt, $aligment , $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim) { //html
+	function getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt, $aligment , $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor) { //html
 		global $post;
 		$flp_post = new WP_Query();
 		$flp_post->query('post_type=post&posts_per_page=' . $numberOfPost );	
@@ -184,6 +218,12 @@ class Fancy_Lates_Post_Widget extends WP_Widget
  					<div id="flp_content" class="<?php echo $showContentAnim ?>"><p><?php $this->the_excerpt_max_charlength($excerptLength); ?></p></div>
 					<div id="flp_button_container" class="<?php echo $showButtonAnim ?>"><a class="button" id="flp_button" href="<?php echo get_permalink(); ?>"> <?php $this->returnReadMore($readMoreText); ?></a></div>
 					<?php } ?>
+					<div style="display:none">
+					<div class="titleColor"><?php echo $titleColor ?></div>
+					<div class="contentColor"><?php echo $contentColor ?></div>
+					<div class="buttonColor"><?php echo $buttonColor ?></div>
+					<div class="borderColor"><?php echo $borderColor ?></div>
+					</div>
 					</div>
 			<?php	} ?>
 			</div>

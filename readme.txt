@@ -4,7 +4,7 @@ Tags: latest, post, fancy, post widget, post sidebar, post effects, latest posts
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7P44PGGFVKR6U
 Requires at least: 3.4
 Tested up to: 4.2.2
-Stable tag: 0.1.1
+Stable tag: 1.2.5
 License: GPLv2
 
 Display the latest post with Featured Image, Excerpt and Read more button each one with Animated effects in your sidebar or content.
@@ -42,3 +42,5 @@ Implement<br>
 
 == Changelog ==
 version 1.0: First Version of the plugin.
+version 1.2.0: Did small Adjustment to the readme and JS files.
+version 1.2.5: Added the option to select CSS color for title, content, and Read More Button

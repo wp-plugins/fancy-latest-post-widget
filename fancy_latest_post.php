@@ -2,7 +2,7 @@
 /* Plugin Name: Fancy Latest Post Widget
 Plugin URI: 
 Description: Display the latest post with Animated effects in your sidebar or content, select an animation effect for the Post Thumbnail, Title, Content and Read More Button, This widget is higly customizable.
-Version: 1.0
+Version: 1.2.5
 Author: Juan Mojica
 Author URI: 
 License: GPLv2
@@ -27,8 +27,9 @@ License: GPLv2
 define( 'CD_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
 require_once( CD_PLUGIN_PATH . 'includes/fancy_latest_post_widget.php' );
+
 /*StyleSheet*/
-add_action( 'wp_enqueue_scripts', 'flp_stylesheet' );
+add_action( 'wp_enqueue_scripts', 'flp_stylesheet');
 function flp_stylesheet() {
     	wp_enqueue_style( 'flp_css_stylesheet', plugins_url('/css/fancy-latest-post-stylesheet.css', __FILE__) );
     	wp_enqueue_style( 'hover_effects', plugins_url('/css/hover.css', __FILE__) );
@@ -36,16 +37,19 @@ function flp_stylesheet() {
 }
 
 /*JS/Jquery*/
-add_action( 'wp_enqueue_scripts', 'flp_js' );
+add_action( 'wp_enqueue_scripts', 'flp_js', 20);
 function flp_js(){
-       wp_enqueue_script('jQuery', "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"); 
-       wp_enqueue_script( 'flp_effects', plugins_url('/js/flp_effects.js', __FILE__) );
+       wp_enqueue_script( 'jquery-min', plugins_url('/js/jquery-2.1.4.min.js', __FILE__), null, null, false); 
+       wp_enqueue_script( 'flp_effects', plugins_url('/js/flp_effects.js', __FILE__), null, null, true);
+	
 }
 
 /*Admin Script and Style*/
-add_action ( 'admin_enqueue_scripts', 'admin_styles');
-function admin_styles(){
+add_action ( 'admin_enqueue_scripts', 'admin_scripts', 20);
+function admin_scripts(){
 	wp_enqueue_style( 'flp_css_admin', plugins_url('/css/flp_admin_style.css', __FILE__) );
-      	wp_enqueue_script( 'flp_admin', plugins_url('/js/flp_admin.js', __FILE__) );
+	wp_enqueue_script( 'jquery-min', plugins_url('/js/jquery-2.1.4.min.js', __FILE__), null, null, false);
+	wp_enqueue_script( 'js-color', plugins_url('/jscolor/jscolor.js', __FILE__), null, null, false);
+      	wp_enqueue_script( 'flp_admin', plugins_url('/js/flp_admin.js', __FILE__), null, null, true);
 }
 ?>
