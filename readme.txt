@@ -41,6 +41,8 @@ Implement<br>
 <img src="http://i.imgur.com/nIZFVeW.png"></img><br>
 
 == Changelog ==
-version 1.0: First Version of the plugin.
-version 1.2.0: Did small Adjustment to the readme and JS files.
-version 1.2.5: Added the option to select CSS color for title, content, and Read More Button
+version 1.2.5: Added the option to select CSS color for title, content, and Read More Button.<br>
+
+version 1.2.0: Did small Adjustment to the readme and JS files.<br>
+
+version 1.0: First Version of the plugin.<br>
