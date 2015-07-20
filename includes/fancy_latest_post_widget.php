@@ -19,7 +19,6 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$instance['readMoreText'] = strip_tags($new_instance['readMoreText']);
 		$instance['excerptLength'] = strip_tags($new_instance['excerptLength']);
 		$instance['showExcerpt'] = $new_instance['showExcerpt'];
-		$instance['aligment'] = esc_sql($new_instance['aligment']);
 		$instance['showImageAnim'] = esc_sql($new_instance['showImageAnim']);
 		$instance['showTitleAnim'] = esc_sql($new_instance['showTitleAnim']);
 		$instance['showContentAnim'] = esc_sql($new_instance['showContentAnim']);
@@ -28,6 +27,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$instance['contentColor'] =  esc_sql($new_instance['contentColor']);
 		$instance['buttonColor'] =  esc_sql($new_instance['buttonColor']);
 		$instance['borderColor'] =  esc_sql($new_instance['borderColor']);
+		$instance['customCSS'] = strip_tags($new_instance['customCSS']);
 		return $instance;
 }
  
@@ -38,7 +38,6 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$readMoreText = esc_attr($instance['readMoreText']);
 		$excerptLength = esc_attr($instance['excerptLength']);
 		$showExcerpt = esc_attr($instance['showExcerpt']);
-		$aligment = esc_attr($instance['aligment']);
 		$showImageAnim = esc_attr($instance['showImageAnim']);
                 $showTitleAnim = esc_attr($instance['showTitleAnim']);
 		$showContentAnim = esc_attr($instance['showContentAnim']);
@@ -47,6 +46,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$contentColor = esc_attr($instance['contentColor']);
 		$buttonColor = esc_attr($instance['buttonColor']);
 		$borderColor = esc_attr($instance['borderColor']);
+		$customCSS = esc_attr($instance['customCSS']);
 	} else {
 		$title = '';
 		$numberOfPost = '';
@@ -54,7 +54,6 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$readMoreText = '';
 		$excerptLength = '';
 		$showExcerpt = '';
-		$aligment = '';
 		$showImageAnim = '';
 		$showTitleAnim = '';
 		$showContentAnim = '';
@@ -63,6 +62,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$contentColor = '';
 		$buttonColor = '';
 		$borderColor = '';
+		$customCSS = '';
 	}
 
   
@@ -72,7 +72,6 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 	<?php 
 	$animArr = array("None","Grow", "Shrink","Pulse", "Pulse Grow", "Pulse Shrink", "Push", "Pop", "Bounce in", "Bounce out", "Rotate", "Grow Rotate", "Float", "Sink", "Bob", "Hang", "Skew", "Skew Forward", "Skew Backward", "Wobble Horizontal", "Wobble 		Vertical", "Wobble To Bottom Right", "Wobble to Top Right", "Wobble Top", "Wooble Bottom", "Wobble Skew", "Buzz",  "Buzz Out", "Round Corners");
         
-	$align = array("Vertical(Sidebar)", "Horizontal(content)");
 
 	?>      <div class="settings_section">
 		<center><h3>DISPLAY SETTINGS</h3></center>
@@ -104,14 +103,6 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		<label for="<?php echo $this->get_field_id('readMoreText'); ?>"><?php _e('Read More Button Value: ', 'Fancy_Lates_Post_Widget'); ?></label>
 		<input class="" id="<?php echo $this->get_field_id('readMoreText'); ?>" name="<?php echo $this->get_field_name('readMoreText'); ?>" type="text" value="<?php echo $readMoreText; ?>" />
 		</p>
-		<p class='flp_aligment'>
-		<label for="<?php echo $this->get_field_id('aligment'); ?>"><?php _e('Aligment: ', 'Fancy_Lates_Post_Widget'); ?></label>		
-		<select id="<?php echo $this->get_field_id('aligment'); ?>"  name="<?php echo $this->get_field_name('aligment'); ?>">
-			<?php for($x=0;$x<2;$x++): ?>
-			<option <?php echo $x == $aligment ? 'selected="selected"' : '';?> value="<?php echo $x;?>"><?php echo $align[$x]; ?></option>
-			<?php endfor;?>
-		</select>
-                </p>
 		</div>
 		
 		<div class="anim_section">
@@ -171,6 +162,10 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		<label for="<?php echo $this->get_field_id('borderColor'); ?>"><?php _e('Post Border Color:', 'Fancy_Lates_Post_Widget'); ?></label><br>
 	        <input class="color" id="borderColor" name="<?php echo $this->get_field_name('borderColor'); ?>"  value="<?php echo $borderColor; ?>" />
 		</p>
+		<p class="flp_custom_css">
+		<label for="<?php echo $this->get_field_id('customCSS'); ?>"><?php _e('Custom CSS Area:', 'Fancy_Lates_Post_Widget'); ?></label><br>
+	        <textarea rows="15" cols="43" style="width:100%; resize: none;" id="customCSS" name="<?php echo $this->get_field_name('customCSS'); ?>"><?php echo $customCSS; ?></textarea>
+		</p>
 		</div>					 
 	<?php
 	} 
@@ -182,7 +177,6 @@ class Fancy_Lates_Post_Widget extends WP_Widget
                 $readMoreText = $instance['readMoreText'];
 		$excerptLength = $instance['excerptLength'];
 		$showExcerpt = $instance['showExcerpt']? 'true' : 'false';
-		$aligment = $instance['aligment'];
 		$showImageAnim = $instance['showImageAnim'];
 		$showTitleAnim = $instance['showTitleAnim'];
 		$showContentAnim = $instance['showContentAnim'];
@@ -191,39 +185,41 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$contentColor = $instance['contentColor'];
 		$buttonColor = $instance['buttonColor'];
 		$borderColor = $instance['borderColor'];
+		$customCSS = $instance['customCSS'];
 		echo $before_widget;
 		if ( $title ) {
 			echo $before_title . $title . $after_title;
 		}
-		$this->getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt, $aligment, $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor);
+		$this->getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt,$showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor, $customCSS);
                 echo $after_widget;
 	}
 
 
 
-	function getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt, $aligment , $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor) { //html
+	function getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt, $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor, $customCSS) { //html
 		global $post;
 		$flp_post = new WP_Query();
 		$flp_post->query('post_type=post&posts_per_page=' . $numberOfPost );	
 		if($flp_post->found_posts > 0) { ?>
-			<div class="latest_post featured-content" id="flp_post_container">
+			<div class="flp_latest_post featured-content" id="flp_post_container">
 				<?php while ($flp_post->have_posts()) { $flp_post->the_post(); ?>
-					<div class="post <?php echo $aligment ?>" id="flp_post">
-					<div class="<?php echo $showImageAnim ?>" id="flp_img"><a href="<?php echo get_permalink(); ?>">
+					<div class="flp_post" id="flp_post">
+					<div class="flp_img <?php echo $showImageAnim ?>" id="flp_img"><a href="<?php echo get_permalink(); ?>">
 					<?php $image = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID) : '<div class="flp_no_img" id="flp_no_img"><img clas="" src="wp-content/plugins/fancy-latest-post-widget/img/no_img.png"><img></div>';
 					echo $image; ?>
 					</div></a>
-					<h2 class="<?php echo $showTitleAnim ?>" id="flp_title"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
+					<h2 class="flp_title <?php echo $showTitleAnim ?>" id="flp_title"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
 					<?php if($showExcerpt == 'true'){ ?>
- 					<div id="flp_content" class="<?php echo $showContentAnim ?>"><p><?php $this->the_excerpt_max_charlength($excerptLength); ?></p></div>
-					<div id="flp_button_container" class="<?php echo $showButtonAnim ?>"><a class="button" id="flp_button" href="<?php echo get_permalink(); ?>"> <?php $this->returnReadMore($readMoreText); ?></a></div>
+ 					<div id="flp_content" class="flp_content <?php echo $showContentAnim ?>"><p><?php $this->the_excerpt_max_charlength($excerptLength); ?></p></div>
+					<div id="flp_button_container" class=""><a class="flp_button <?php echo $showButtonAnim ?>" id="flp_button " href="<?php echo get_permalink(); ?>"> <?php $this->returnReadMore($readMoreText); ?></a></div>
 					<?php } ?>
-					<div style="display:none">
+					<div style="display:none" class="flp_hidden_fields">
 					<div class="titleColor"><?php echo $titleColor ?></div>
 					<div class="contentColor"><?php echo $contentColor ?></div>
 					<div class="buttonColor"><?php echo $buttonColor ?></div>
 					<div class="borderColor"><?php echo $borderColor ?></div>
 					</div>
+					<?php echo '<style>'.$customCSS.'</style>'; ?>
 					</div>
 			<?php	} ?>
 			</div>

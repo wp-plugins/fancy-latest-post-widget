@@ -1,531 +1,604 @@
 $(document).ready(function(){
 
 /*Add effects to the Image*/
-var imgClass = $("#flp_img").attr("class");
-switch(imgClass){
-     case '0':
-     $("#flp_img img").addClass("no-effect");
+var imgClass = new Array();
+$(".flp_img").each(function(){
+imgClass.push($(this));
+});
+
+for(var i=0; i<imgClass.length; i++){
+switch(imgClass[i].attr("class")){
+     case 'flp_img 0':
+     $(imgClass[i]).addClass("no-effect");
      break;
 
-     case '1':
-     $("#flp_img img").addClass("hvr-grow");
+     case 'flp_img 1':
+     $(imgClass[i]).addClass("hvr-grow");
      break;
 
-     case '2':
-     $("#flp_img img").addClass("hvr-shrink");
+     case 'flp_img 2':
+     $(imgClass[i]).addClass("hvr-shrink");
      break;
 
-     case '3':
-     $("#flp_img img").addClass("hvr-pulse");
+     case 'flp_img 3':
+     $(imgClass[i]).addClass("hvr-pulse");
      break;
 
-     case '4':
-     $("#flp_img img").addClass("hvr-pulse-grow");
+     case 'flp_img 4':
+     $(imgClass[i]).addClass("hvr-pulse-grow");
      break;
 
-     case '5':
-     $("#flp_img img").addClass("hvr-pulse-shrink");
+     case 'flp_img 5':
+     $(imgClass[i]).addClass("hvr-pulse-shrink");
      break;
 
-     case '6':
-     $("#flp_img img").addClass("hvr-push");
+     case 'flp_img 6':
+     $(imgClass[i]).addClass("hvr-push");
      break;
 
-     case '7':
-     $("#flp_img img").addClass("hvr-pop");
+     case 'flp_img 7':
+     $(imgClass[i]).addClass("hvr-pop");
      break;
 
-     case '8':
-     $("#flp_img img").addClass("hvr-bounce-in");
+     case 'flp_img 8':
+     $(imgClass[i]).addClass("hvr-bounce-in");
      break;
 
-     case '9':
-     $("#flp_img img").addClass("hvr-bounce-out");
+     case 'flp_img 9':
+     $(imgClass[i]).addClass("hvr-bounce-out");
      break;
 
-     case '10':
-     $("#flp_img img").addClass("hvr-rotate");
+     case 'flp_img 10':
+     $(imgClass[i]).addClass("hvr-rotate");
      break;
 
-     case '11':
-     $("#flp_img img").addClass("hvr-grow-rotate");
+     case 'flp_img 11':
+     $(imgClass[i]).addClass("hvr-grow-rotate");
      break;
 
-     case '12':
-     $("#flp_img img").addClass("hvr-float");
+     case 'flp_img 12':
+     $(imgClass[i]).addClass("hvr-float");
      break;
 
-     case '13':
-     $("#flp_img img").addClass("hvr-sink");
+     case 'flp_img 13':
+     $(imgClass[i]).addClass("hvr-sink");
      break;
 
-     case '14':
-     $("#flp_img img").addClass("hvr-bob");
+     case 'flp_img 14':
+     $(imgClass[i]).addClass("hvr-bob");
      break;
 
-     case '15':
-     $("#flp_img img").addClass("hvr-hang");
+     case 'flp_img 15':
+     $(imgClass[i]).addClass("hvr-hang");
      break;
 
-     case '16':
-     $("#flp_img img").addClass("hvr-skew");
+     case 'flp_img 16':
+     $(imgClass[i]).addClass("hvr-skew");
      break;
 
-     case '17':
-     $("#flp_img img").addClass("hvr-skew-forward");
+     case 'flp_img 17':
+     $(imgClass[i]).addClass("hvr-skew-forward");
      break;
 
-     case '18':
-     $("#flp_img img").addClass("hvr-skew-backward");
+     case 'flp_img 18':
+     $(imgClass[i]).addClass("hvr-skew-backward");
      break;
 
-     case '19':
-     $("#flp_img img").addClass("hvr-wobble-horizontal");
+     case 'flp_img 19':
+     $(imgClass[i]).addClass("hvr-wobble-horizontal");
      break;
 
-     case '20':
-     $("#flp_img img").addClass("hvr-wobble-vertical");
+     case 'flp_img 20':
+     $(imgClass[i]).addClass("hvr-wobble-vertical");
      break;
 
-     case '21':
-     $("#flp_img img").addClass("hvr-wobble-to-bottom-right");
+     case 'flp_img 21':
+     $(imgClass[i]).addClass("hvr-wobble-to-bottom-right");
      break;
 
-     case '22':
-     $("#flp_img img").addClass("hvr-wobble-to-top-right");
+     case 'flp_img 22':
+     $(imgClass[i]).addClass("hvr-wobble-to-top-right");
      break;
 
-     case '23':
-     $("#flp_img img").addClass("hvr-wobble-top");
+     case 'flp_img 23':
+     $(imgClass[i]).addClass("hvr-wobble-top");
      break;
 
-     case '24':
-     $("#flp_img img").addClass("hvr-wobble-bottom");
+     case 'flp_img 24':
+     $(imgClass[i]).addClass("hvr-wobble-bottom");
      break;
 
-     case '25':
-     $("#flp_img img").addClass("hvr-wobble-skew");
+     case 'flp_img 25':
+     $(imgClass[i]).addClass("hvr-wobble-skew");
      break;
 
-     case '26':
-     $("#flp_img img").addClass("hvr-buzz");
+     case 'flp_img 26':
+     $(imgClass[i]).addClass("hvr-buzz");
      break;
 
-     case '27':
-     $("#flp_img img").addClass("hvr-buzz-out");
+     case 'flp_img 27':
+     $(imgClass[i]).addClass("hvr-buzz-out");
      break;
 
-     case '28':
-     $("#flp_img img").addClass("hvr-round-corners");
+     case 'flp_img 28':
+     $(imgClass[i]).addClass("hvr-round-corners");
      break;
 
      default:
      }
+}
 /*End of Add effects to the Image*/
+var titleClass = new Array();
+$(".flp_title").each(function(){
+titleClass.push($(this));
+});
 
-/*Title Animation */
-var titleClass = $("#flp_title").attr("class");
-switch(titleClass){
-     case '0':
-     $("#flp_title a").addClass("no-effect");
+for(var i=0; i<titleClass.length; i++){
+switch(titleClass[i].attr("class")){
+     case 'flp_title 0':
+     $(titleClass[i]).addClass("no-effect");
      break;
 
-     case '1':
-     $("#flp_title a").addClass("hvr-grow");
+     case 'flp_title 1':
+     $(titleClass[i]).addClass("hvr-grow");
      break;
 
-     case '2':
-     $("#flp_title a").addClass("hvr-shrink");
+     case 'flp_title 2':
+     $(titleClass[i]).addClass("hvr-shrink");
      break;
 
-     case '3':
-     $("#flp_title a").addClass("hvr-pulse");
+     case 'flp_title 3':
+     $(titleClass[i]).addClass("hvr-pulse");
      break;
 
-     case '4':
-     $("#flp_title a").addClass("hvr-pulse-grow");
+     case 'flp_title 4':
+     $(titleClass[i]).addClass("hvr-pulse-grow");
      break;
 
-     case '5':
-     $("#flp_title a").addClass("hvr-pulse-shrink");
+     case 'flp_title 5':
+     $(titleClass[i]).addClass("hvr-pulse-shrink");
      break;
 
-     case '6':
-     $("#flp_title a").addClass("hvr-push");
+     case 'flp_title 6':
+     $(titleClass[i]).addClass("hvr-push");
      break;
 
-     case '7':
-     $("#flp_title a").addClass("hvr-pop");
+     case 'flp_title 7':
+     $(titleClass[i]).addClass("hvr-pop");
      break;
 
-     case '8':
-     $("#flp_title a").addClass("hvr-bounce-in");
+     case 'flp_title 8':
+     $(titleClass[i]).addClass("hvr-bounce-in");
      break;
 
-     case '9':
-     $("#flp_title a").addClass("hvr-bounce-out");
+     case 'flp_title 9':
+     $(titleClass[i]).addClass("hvr-bounce-out");
      break;
 
-     case '10':
-     $("#flp_title a").addClass("hvr-rotate");
+     case 'flp_title 10':
+     $(titleClass[i]).addClass("hvr-rotate");
      break;
 
-     case '11':
-     $("#flp_title a").addClass("hvr-grow-rotate");
+     case 'flp_title 11':
+     $(titleClass[i]).addClass("hvr-grow-rotate");
      break;
 
-     case '12':
-     $("#flp_title a").addClass("hvr-float");
+     case 'flp_title 12':
+     $(titleClass[i]).addClass("hvr-float");
      break;
 
-     case '13':
-     $("#flp_title a").addClass("hvr-sink");
+     case 'flp_title 13':
+     $(titleClass[i]).addClass("hvr-sink");
      break;
 
-     case '14':
-     $("#flp_title a").addClass("hvr-bob");
+     case 'flp_title 14':
+     $(titleClass[i]).addClass("hvr-bob");
      break;
 
-     case '15':
-     $("#flp_title a").addClass("hvr-hang");
+     case 'flp_title 15':
+     $(titleClass[i]).addClass("hvr-hang");
      break;
 
-     case '16':
-     $("#flp_title a").addClass("hvr-skew");
+     case 'flp_title 16':
+     $(titleClass[i]).addClass("hvr-skew");
      break;
 
-     case '17':
-     $("#flp_title a").addClass("hvr-skew-forward");
+     case 'flp_title 17':
+     $(titleClass[i]).addClass("hvr-skew-forward");
      break;
 
-     case '18':
-     $("#flp_title a").addClass("hvr-skew-backward");
+     case 'flp_title 18':
+     $(titleClass[i]).addClass("hvr-skew-backward");
      break;
 
-     case '19':
+     case 'flp_title 19':
      $("#flp_title").addClass("hvr-wobble-horizontal");
      break;
 
-     case '20':
-     $("#flp_title a").addClass("hvr-wobble-vertical");
+     case 'flp_title 20':
+     $(titleClass[i]).addClass("hvr-wobble-vertical");
      break;
 
-     case '21':
-     $("#flp_title a").addClass("hvr-wobble-to-bottom-right");
+     case 'flp_title 21':
+     $(titleClass[i]).addClass("hvr-wobble-to-bottom-right");
      break;
 
-     case '22':
-     $("#flp_title a").addClass("hvr-wobble-to-top-right");
+     case 'flp_title 22':
+     $(titleClass[i]).addClass("hvr-wobble-to-top-right");
      break;
 
-     case '23':
-     $("#flp_title a").addClass("hvr-wobble-top");
+     case 'flp_title 23':
+     $(titleClass[i]).addClass("hvr-wobble-top");
      break;
 
-     case '24':
-     $("#flp_title a").addClass("hvr-wobble-bottom");
+     case 'flp_title 24':
+     $(titleClass[i]).addClass("hvr-wobble-bottom");
      break;
 
-     case '25':
-     $("#flp_title a").addClass("hvr-wobble-skew");
+     case 'flp_title 25':
+     $(titleClass[i]).addClass("hvr-wobble-skew");
      break;
 
-     case '26':
-     $("#flp_title a").addClass("hvr-buzz");
+     case 'flp_title 26':
+     $(titleClass[i]).addClass("hvr-buzz");
      break;
 
-     case '27': 
-     $("#flp_title a").addClass("hvr-buzz-out");
+     case 'flp_title 27': 
+     $(titleClass[i]).addClass("hvr-buzz-out");
      break;
 
-     case '28':
-     $("#flp_title a").addClass("hvr-round-corners");
+     case 'flp_title 28':
+     $(titleClass[i]).addClass("hvr-round-corners");
      break;
 
      default:
      }
+}
 /*End of title Animation*/
 
 /*content Animation*/
-var contentClass = $("#flp_content").attr("class");
-switch(contentClass){
-     case '0':
-     $("#flp_content p").addClass("no-effect");
+var contentClass = new Array();
+$(".flp_content").each(function(){
+contentClass.push($(this));
+});
+
+for(var i=0; i<contentClass.length; i++){
+switch(contentClass[i].attr("class")){
+     case 'flp_content 0':
+     $(contentClass[i]).addClass("no-effect");
      break;
 
-     case '1':
-     $("#flp_content p").addClass("hvr-grow");
+     case 'flp_content 1':
+     $(contentClass[i]).addClass("hvr-grow");
      break;
 
-     case '2':
-     $("#flp_content p").addClass("hvr-shrink");
+     case 'flp_content 2':
+     $(contentClass[i]).addClass("hvr-shrink");
      break;
 
-     case '3':
-     $("#flp_content p").addClass("hvr-pulse");
+     case 'flp_content 3':
+     $(contentClass[i]).addClass("hvr-pulse");
      break;
 
-     case '4':
-     $("#flp_content p").addClass("hvr-pulse-grow");
+     case 'flp_content 4':
+     $(contentClass[i]).addClass("hvr-pulse-grow");
      break;
 
-     case '5':
-     $("#flp_content p").addClass("hvr-pulse-shrink");
+     case 'flp_content 5':
+     $(contentClass[i]).addClass("hvr-pulse-shrink");
      break;
 
-     case '6':
-     $("#flp_content p").addClass("hvr-push");
+     case 'flp_content 6':
+     $(contentClass[i]).addClass("hvr-push");
      break;
 
-     case '7':
-     $("#flp_content p").addClass("hvr-pop");
+     case 'flp_content 7':
+     $(contentClass[i]).addClass("hvr-pop");
      break;
 
-     case '8':
-     $("#flp_content p").addClass("hvr-bounce-in");
+     case 'flp_content 8':
+     $(contentClass[i]).addClass("hvr-bounce-in");
      break;
 
-     case '9':
-     $("#flp_content p").addClass("hvr-bounce-out");
+     case 'flp_content 9':
+     $(contentClass[i]).addClass("hvr-bounce-out");
      break;
 
-     case '10':
-     $("#flp_content p").addClass("hvr-rotate");
+     case 'flp_content 10':
+     $(contentClass[i]).addClass("hvr-rotate");
      break;
 
-     case '11':
-     $("#flp_content p").addClass("hvr-grow-rotate");
+     case 'flp_content 11':
+     $(contentClass[i]).addClass("hvr-grow-rotate");
      break;
 
-     case '12':
-     $("#flp_content p").addClass("hvr-float");
+     case 'flp_content 12':
+     $(contentClass[i]).addClass("hvr-float");
      break;
 
-     case '13':
-     $("#flp_content p").addClass("hvr-sink");
+     case 'flp_content 13':
+     $(contentClass[i]).addClass("hvr-sink");
      break;
 
-     case '14':
-     $("#flp_content p").addClass("hvr-bob");
+     case 'flp_content 14':
+     $(contentClass[i]).addClass("hvr-bob");
      break;
 
-     case '15':
-     $("#flp_content p").addClass("hvr-hang");
+     case 'flp_content 15':
+     $(contentClass[i]).addClass("hvr-hang");
      break;
 
-     case '16':
-     $("#flp_content p").addClass("hvr-skew");
+     case 'flp_content 16':
+     $(contentClass[i]).addClass("hvr-skew");
      break;
 
-     case '17':
-     $("#flp_content p").addClass("hvr-skew-forward");
+     case 'flp_content 17':
+     $(contentClass[i]).addClass("hvr-skew-forward");
      break;
 
-     case '18':
-     $("#flp_content p").addClass("hvr-skew-backward");
+     case 'flp_content 18':
+     $(contentClass[i]).addClass("hvr-skew-backward");
      break;
 
-     case '19':
-     $("#flp_content p").addClass("hvr-wobble-horizontal");
+     case 'flp_content 19':
+     $(contentClass[i]).addClass("hvr-wobble-horizontal");
      break;
 
-     case '20':
-     $("#flp_content p").addClass("hvr-wobble-vertical");
+     case 'flp_content 20':
+     $(contentClass[i]).addClass("hvr-wobble-vertical");
      break;
 
-     case '21':
-     $("#flp_content p").addClass("hvr-wobble-to-bottom-right");
+     case 'flp_content 21':
+     $(contentClass[i]).addClass("hvr-wobble-to-bottom-right");
      break;
 
-     case '22':
-     $("#flp_content p").addClass("hvr-wobble-to-top-right");
+     case 'flp_content 22':
+     $(contentClass[i]).addClass("hvr-wobble-to-top-right");
      break;
 
-     case '23':
-     $("#flp_content p").addClass("hvr-wobble-top");
+     case 'flp_content 23':
+     $(contentClass[i]).addClass("hvr-wobble-top");
      break;
 
-     case '24':
-     $("#flp_content p").addClass("hvr-wobble-bottom");
+     case 'flp_content 24':
+     $(contentClass[i]).addClass("hvr-wobble-bottom");
      break;
 
-     case '25':
-     $("#flp_content p").addClass("hvr-wobble-skew");
+     case 'flp_content 25':
+     $(contentClass[i]).addClass("hvr-wobble-skew");
      break;
 
-     case '26':
-     $("#flp_content p").addClass("hvr-buzz");
+     case 'flp_content 26':
+     $(contentClass[i]).addClass("hvr-buzz");
      break;
 
-     case '27': 
-     $("#flp_content p").addClass("hvr-buzz-out");
+     case 'flp_content 27': 
+     $(contentClass[i]).addClass("hvr-buzz-out");
      break;
 
-     case '28':
-     $("#flp_content p").addClass("hvr-round-corners");
+     case 'flp_content 28':
+     $(contentClass[i]).addClass("hvr-round-corners");
      break;
 
      default:
      }
-
+}
 /*End Content Animation*/
 
 /*Start Button Animation*/
-var buttonClass = $("#flp_button_container").attr("class");
-switch(buttonClass){
-     case '0':
-     $("#flp_button_container a").addClass("no-effect");
+var buttonClass = new Array();
+$(".flp_button").each(function(){
+buttonClass.push($(this));
+});
+
+for(var i=0; i<buttonClass.length; i++){
+switch(buttonClass[i].attr("class")){
+     case 'flp_button 0':
+     $(buttonClass[i]).addClass("no-effect");
      break;
 
-     case '1':
-     $("#flp_button_container a").addClass("hvr-grow");
+     case 'flp_button 1':
+     $(buttonClass[i]).addClass("hvr-grow");
+     break;
+ 
+     case 'flp_button 2':
+     $(buttonClass[i]).addClass("hvr-shrink");
      break;
 
-     case '2':
-     $("#flp_button_container a").addClass("hvr-shrink");
+     case 'flp_button 3':
+     $(buttonClass[i]).addClass("hvr-pulse");
      break;
 
-     case '3':
-     $("#flp_button_container a").addClass("hvr-pulse");
+     case 'flp_button 4':
+     $(buttonClass[i]).addClass("hvr-pulse-grow");
      break;
 
-     case '4':
-     $("#flp_button_container a").addClass("hvr-pulse-grow");
+     case 'flp_button 5':
+     $(buttonClass[i]).addClass("hvr-pulse-shrink");
      break;
 
-     case '5':
-     $("#flp_button_container a").addClass("hvr-pulse-shrink");
+     case 'flp_button 6':
+     $(buttonClass[i]).addClass("hvr-push");
      break;
 
-     case '6':
-     $("#flp_button_container a").addClass("hvr-push");
+     case 'flp_button 7':
+     $(buttonClass[i]).addClass("hvr-pop");
      break;
 
-     case '7':
-     $("#flp_button_container a").addClass("hvr-pop");
+     case 'flp_button 8':
+     $(buttonClass[i]).addClass("hvr-bounce-in");
      break;
 
-     case '8':
-     $("#flp_button_container a").addClass("hvr-bounce-in");
+     case 'flp_button 9':
+     $(buttonClass[i]).addClass("hvr-bounce-out");
      break;
 
-     case '9':
-     $("#flp_button_container a").addClass("hvr-bounce-out");
+     case 'flp_button 10':
+     $(buttonClass[i]).addClass("hvr-rotate");
      break;
 
-     case '10':
-     $("#flp_button_container a").addClass("hvr-rotate");
+     case 'flp_button 11':
+     $(buttonClass[i]).addClass("hvr-grow-rotate");
      break;
 
-     case '11':
-     $("#flp_button_container a").addClass("hvr-grow-rotate");
+     case 'flp_button 12':
+     $(buttonClass[i]).addClass("hvr-float");
      break;
 
-     case '12':
-     $("#flp_button_container a").addClass("hvr-float");
+     case 'flp_button 13':
+     $(buttonClass[i]).addClass("hvr-sink");
      break;
 
-     case '13':
-     $("#flp_button_container a").addClass("hvr-sink");
+     case 'flp_button 14':
+     $(buttonClass[i]).addClass("hvr-bob");
      break;
 
-     case '14':
-     $("#flp_button_container a").addClass("hvr-bob");
+     case 'flp_button 15':
+     $(buttonClass[i]).addClass("hvr-hang");
      break;
 
-     case '15':
-     $("#flp_button_container a").addClass("hvr-hang");
+     case 'flp_button 16':
+     $(buttonClass[i]).addClass("hvr-skew");
      break;
 
-     case '16':
-     $("#flp_button_container a").addClass("hvr-skew");
+     case 'flp_button 17':
+     $(buttonClass[i]).addClass("hvr-skew-forward");
      break;
 
-     case '17':
-     $("#flp_button_container a").addClass("hvr-skew-forward");
+     case 'flp_button 18':
+     $(buttonClass[i]).addClass("hvr-skew-backward");
      break;
 
-     case '18':
-     $("#flp_button_container a").addClass("hvr-skew-backward");
+     case 'flp_button 19':
+     $(buttonClass[i]).addClass("hvr-wobble-horizontal");
      break;
 
-     case '19':
-     $("#flp_button_container a").addClass("hvr-wobble-horizontal");
+     case 'flp_button 20':
+     $(buttonClass[i]).addClass("hvr-wobble-vertical");
      break;
 
-     case '20':
-     $("#flp_button_container a").addClass("hvr-wobble-vertical");
+     case 'flp_button 21':
+     $(buttonClass[i]).addClass("hvr-wobble-to-bottom-right");
      break;
 
-     case '21':
-     $("#flp_button_container a").addClass("hvr-wobble-to-bottom-right");
+     case 'flp_button 22':
+     $(buttonClass[i]).addClass("hvr-wobble-to-top-right");
      break;
 
-     case '22':
-     $("#flp_button_container a").addClass("hvr-wobble-to-top-right");
+     case 'flp_button 23':
+     $(buttonClass[i]).addClass("hvr-wobble-top");
      break;
 
-     case '23':
-     $("#flp_button_container a").addClass("hvr-wobble-top");
+     case 'flp_button 24':
+     $(buttonClass[i]).addClass("hvr-wobble-bottom");
      break;
 
-     case '24':
-     $("#flp_button_container a").addClass("hvr-wobble-bottom");
+     case 'flp_button 25':
+     $(buttonClass[i]).addClass("hvr-wobble-skew");
      break;
 
-     case '25':
-     $("#flp_button_container a").addClass("hvr-wobble-skew");
+     case 'flp_button 26':
+     $(buttonClass[i]).addClass("hvr-buzz");
      break;
 
-     case '26':
-     $("#flp_button_container a").addClass("hvr-buzz");
+     case 'flp_button 27': 
+     $(buttonClass[i]).addClass("hvr-buzz-out");
      break;
 
-     case '27': 
-     $("#flp_button_container a").addClass("hvr-buzz-out");
-     break;
-
-     case '28':
-     $("#flp_button_container a").addClass("hvr-round-corners");
+     case 'flp_button 28':
+     $(buttonClass[i]).addClass("hvr-round-corners");
      break;
 
      default:
      }
-
+}
 /*End Button Animation*/
 /*Post Aligment*/
-var postaling = $("#flp_post").attr("class");
-    switch(postaling){
-	case 'post 0':
-	$(".post").addClass("vertical");
-	break;
+var containerWidth = new Array();
+$(".flp_latest_post").each(function(){
+containerWidth.push($(this));
+});
 
-	case 'post 1':
-	$(".post").addClass("horizontal");
- 	break;
-	
-	default:
-	
-	}
+for(var i=0; i<containerWidth.length; i++){
+
+if(containerWidth[i].width() >= 800){
+$(containerWidth[i]).addClass("horizontal");
+}
+}
+
 /*End of Post Aligment*/
 
 /*CSS changes and Colors*/
-var titleColor = $('.titleColor').html();
-$("#flp_title a").css("color", "#"+titleColor);
-
-var contentColor = $('.contentColor').html();
-$("#flp_content p").css("color", "#"+contentColor);
-
-var buttonColor = $('.buttonColor').html();
-$("#flp_button_container a").css("color", "#"+buttonColor);
-$("#flp_button_container a").css("border-color", "#"+buttonColor);
-$("#flp_button_container a").hover(function(){
-	$("#flp_button_container a").css("color", "#"+buttonColor);
+/*title Color*/
+var titleColor = new Array();
+$('.titleColor').each(function(){
+titleColor.push($(this));
 });
 
-var borderColor = $('.borderColor').html();
-$("#flp_post_container .post").css("border-color", "#"+borderColor);
+var titleColorSelector = new Array();
+$('.flp_title a').each(function(){
+titleColorSelector.push($(this));
 });
 
+for(var i = 0; i<titleColorSelector.length; i++){
+$(titleColorSelector[i]).css("color", "#"+titleColor[i].html());
+}
+/*End Title Color*/
+
+/*Content Color*/
+var contentColor = new Array();
+$('.contentColor').each(function(){
+contentColor.push($(this));
+});
+
+var contentColorSelector = new Array();
+$(".flp_content p").each(function(){
+contentColorSelector.push($(this));
+});
+
+for(var i=0; i<contentColorSelector.length; i++){
+$(contentColorSelector[i]).css("color", "#"+contentColor[i].html());
+}
+/*End content Color*/
+
+/*Button Color*/
+var buttonColor = new Array();
+$(".buttonColor").each(function(){
+buttonColor.push($(this));
+});
+
+var buttonColorSelector = new Array();
+$(".flp_button").each(function(){
+buttonColorSelector.push($(this));
+});
+
+for(var i=0; i<buttonColorSelector.length; i++){
+$(buttonColorSelector[i]).css("color", "#"+buttonColor[i].html());
+$(buttonColorSelector[i]).css("border-color", "#"+buttonColor[i].html());
+}
+/*End of Button Color*/
+
+/*Border Color*/
+var borderColor = new Array();
+$('.borderColor').each(function(){
+borderColor.push($(this));
+});
+
+var borderColorSelector = new Array();
+$(".flp_post").each(function(){
+borderColorSelector.push($(this));
+});
+
+for(var i=0; i<borderColorSelector.length; i++){
+$(borderColorSelector[i]).css("border-color", "#"+borderColor[i].html());
+}
+/*End of Border Color*/
+/*End of CSS changes and colors*/
+
+/*Hidding the div with the color fields*/
+$(".flp_hidden_fields").hide();
+/*End of the hidden fields*/
+
+});
 
 

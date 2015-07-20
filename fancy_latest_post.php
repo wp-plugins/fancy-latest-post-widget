@@ -1,8 +1,8 @@
 <?php
 /* Plugin Name: Fancy Latest Post Widget
 Plugin URI: 
-Description: Display the latest post with Animated effects in your sidebar or content, select an animation effect for the Post Thumbnail, Title, Content and Read More Button, This widget is higly customizable.
-Version: 1.2.5
+Description: Display the latest post with Animated effects in your sidebar or content, select an animation effect and color for the Post Thumbnail, Title, Content and Read More Button, This widget is the only of this kind.
+Version: 1.2.6
 Author: Juan Mojica
 Author URI: 
 License: GPLv2

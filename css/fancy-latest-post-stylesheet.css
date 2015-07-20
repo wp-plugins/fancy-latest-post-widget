@@ -3,38 +3,39 @@
 margin-bottom: 25px;
 }
 
-#flp_post{
+.flp_post{
 padding: 5px;
 margin-bottom: 25px;
 border: 1px solid #000000;
 }
 
-#flp_img{
+.flp_img{
 text-align: center;
 }
 
-#flp_title{
+.flp_title{
 font-size: 16px;
 margin-top: 10px;
 margin-bottom: 10px;
 text-align: center;
+display: block !important;
 }
 
-#flp_title a{
+.flp_title a{
 font-weight: bold;
 }
 
-#flp_post a{
+.flp_post a{
 color: #000000;
 }
 
-#flp_content{
+.flp_content{
 text-align: center;
 padding: 5px;
 width: 100%;
 }
 
-#flp_content p{
+.flp_content p{
 color: #000000;
 }
 
@@ -56,16 +57,25 @@ margin-bottom: 15px;
 text-decoration: none;
 }
 
-@media(max-width: 799px){
-#flp_post_container .horizontal{
+@media(max-width: 600px){
+.horizontal .flp_post{
+  width: 100% !important;
+  float: none !important;
+  margin-right: 0px !important;
+}
+}
+
+
+@media(max-width: 999px){
+.horizontal .flp_post{
   width: 48%;
   float: left;
   margin-right: 10px;
 }
 }
 
-@media(min-width: 800px){
-#flp_post_container .horizontal{
+@media(min-width: 1000px){
+.horizontal .flp_post{
   width: 23%;
   float: left;
   margin-right: 10px;
