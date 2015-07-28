@@ -38,7 +38,7 @@ Implement<br>
 <img src="http://i.imgur.com/nIZFVeW.png"></img><br>
 
 == Changelog ==
-version 1.3.6: Fixed the jQuery conflicts with the themes and other plugins.<br>
+version 1.3.7: Fixed the jQuery conflicts with the themes and other plugins.<br>
 
 version 1.2.6: Added a custom CSS area, removed the Aligment dropdown and added a smart screen width detector to display 1, 2 or 4 post per row depending of the space available<br>
 
