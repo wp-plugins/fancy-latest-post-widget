@@ -1,13 +1,13 @@
 === Fancy Latest Post Widget  ===
 Contributors: Juan Mojica
-Tags: latest, post, fancy, post widget, post sidebar, post effects, latest posts, latest posts widget, post thumbnails, posts, posts widget, recent posts, widget, post animation, thumbnail animation
+Tags: latest, post, fancy, post widget, post sidebar, post effects, latest posts, latest posts widget, post thumbnails, posts, posts widget, recent posts, widget, post animation, thumbnail animationn recent, recent post
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7P44PGGFVKR6U
 Requires at least: 3.4
-Tested up to: 4.2.2
-Stable tag: 1.2.6
+Tested up to: 4.2.3
+Stable tag: 1.3.6
 License: GPLv2
 
-Display the latest post with Animated effects in your sidebar or content, select an animation effect and Style for the Post Thumbnail, Title, Content and Read More Button, This widget is the only of this kind.
+Display the latest post with Animated effects in your sidebar or content, select an animation effect for the Thumbnail, Title, Content and Read More.
 
 == Description ==
 Display the latest post with Animated effects in your sidebar or content.
@@ -15,9 +15,6 @@ Display the latest post with Animated effects in your sidebar or content.
 Select an animation effect and Style for the Post Thumbnail, Title, Content and Read More Button.
 
 So far the only plugin that allow you to add an animation and Color for the post thumbnail, post title, post content and read more button.
-
-This plugin is highly open to customization, all the credit for the effects are going to Ian Lunn: 
-http://ianlunn.github.io/Hover/
 
 Please find a demo of the plugin <a href="http://juanmojicademosite.zz.mu/">Here</a>
 
@@ -41,6 +38,8 @@ Implement<br>
 <img src="http://i.imgur.com/nIZFVeW.png"></img><br>
 
 == Changelog ==
+version 1.3.6: Fixed the jQuery conflicts with the themes and other plugins.<br>
+
 version 1.2.6: Added a custom CSS area, removed the Aligment dropdown and added a smart screen width detector to display 1, 2 or 4 post per row depending of the space available<br>
 
 version 1.2.5: Added the option to select CSS color for title, content, and Read More Button.<br>

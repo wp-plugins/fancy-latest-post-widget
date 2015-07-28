@@ -1,127 +1,128 @@
-$(document).ready(function(){
+var jQuery =jQuery.noConflict();
+jQuery(document).ready(function(){
 
 /*Add effects to the Image*/
 var imgClass = new Array();
-$(".flp_img").each(function(){
-imgClass.push($(this));
+jQuery(".flp_img").each(function(){
+imgClass.push(jQuery(this));
 });
 
 for(var i=0; i<imgClass.length; i++){
 switch(imgClass[i].attr("class")){
      case 'flp_img 0':
-     $(imgClass[i]).addClass("no-effect");
+     jQuery(imgClass[i]).addClass("no-effect");
      break;
 
      case 'flp_img 1':
-     $(imgClass[i]).addClass("hvr-grow");
+     jQuery(imgClass[i]).addClass("hvr-grow");
      break;
 
      case 'flp_img 2':
-     $(imgClass[i]).addClass("hvr-shrink");
+     jQuery(imgClass[i]).addClass("hvr-shrink");
      break;
 
      case 'flp_img 3':
-     $(imgClass[i]).addClass("hvr-pulse");
+     jQuery(imgClass[i]).addClass("hvr-pulse");
      break;
 
      case 'flp_img 4':
-     $(imgClass[i]).addClass("hvr-pulse-grow");
+     jQuery(imgClass[i]).addClass("hvr-pulse-grow");
      break;
 
      case 'flp_img 5':
-     $(imgClass[i]).addClass("hvr-pulse-shrink");
+     jQuery(imgClass[i]).addClass("hvr-pulse-shrink");
      break;
 
      case 'flp_img 6':
-     $(imgClass[i]).addClass("hvr-push");
+     jQuery(imgClass[i]).addClass("hvr-push");
      break;
 
      case 'flp_img 7':
-     $(imgClass[i]).addClass("hvr-pop");
+     jQuery(imgClass[i]).addClass("hvr-pop");
      break;
 
      case 'flp_img 8':
-     $(imgClass[i]).addClass("hvr-bounce-in");
+     jQuery(imgClass[i]).addClass("hvr-bounce-in");
      break;
 
      case 'flp_img 9':
-     $(imgClass[i]).addClass("hvr-bounce-out");
+     jQuery(imgClass[i]).addClass("hvr-bounce-out");
      break;
 
      case 'flp_img 10':
-     $(imgClass[i]).addClass("hvr-rotate");
+     jQuery(imgClass[i]).addClass("hvr-rotate");
      break;
 
      case 'flp_img 11':
-     $(imgClass[i]).addClass("hvr-grow-rotate");
+     jQuery(imgClass[i]).addClass("hvr-grow-rotate");
      break;
 
      case 'flp_img 12':
-     $(imgClass[i]).addClass("hvr-float");
+     jQuery(imgClass[i]).addClass("hvr-float");
      break;
 
      case 'flp_img 13':
-     $(imgClass[i]).addClass("hvr-sink");
+     jQuery(imgClass[i]).addClass("hvr-sink");
      break;
 
      case 'flp_img 14':
-     $(imgClass[i]).addClass("hvr-bob");
+     jQuery(imgClass[i]).addClass("hvr-bob");
      break;
 
      case 'flp_img 15':
-     $(imgClass[i]).addClass("hvr-hang");
+     jQuery(imgClass[i]).addClass("hvr-hang");
      break;
 
      case 'flp_img 16':
-     $(imgClass[i]).addClass("hvr-skew");
+     jQuery(imgClass[i]).addClass("hvr-skew");
      break;
 
      case 'flp_img 17':
-     $(imgClass[i]).addClass("hvr-skew-forward");
+     jQuery(imgClass[i]).addClass("hvr-skew-forward");
      break;
 
      case 'flp_img 18':
-     $(imgClass[i]).addClass("hvr-skew-backward");
+     jQuery(imgClass[i]).addClass("hvr-skew-backward");
      break;
 
      case 'flp_img 19':
-     $(imgClass[i]).addClass("hvr-wobble-horizontal");
+     jQuery(imgClass[i]).addClass("hvr-wobble-horizontal");
      break;
 
      case 'flp_img 20':
-     $(imgClass[i]).addClass("hvr-wobble-vertical");
+     jQuery(imgClass[i]).addClass("hvr-wobble-vertical");
      break;
 
      case 'flp_img 21':
-     $(imgClass[i]).addClass("hvr-wobble-to-bottom-right");
+     jQuery(imgClass[i]).addClass("hvr-wobble-to-bottom-right");
      break;
 
      case 'flp_img 22':
-     $(imgClass[i]).addClass("hvr-wobble-to-top-right");
+     jQuery(imgClass[i]).addClass("hvr-wobble-to-top-right");
      break;
 
      case 'flp_img 23':
-     $(imgClass[i]).addClass("hvr-wobble-top");
+     jQuery(imgClass[i]).addClass("hvr-wobble-top");
      break;
 
      case 'flp_img 24':
-     $(imgClass[i]).addClass("hvr-wobble-bottom");
+     jQuery(imgClass[i]).addClass("hvr-wobble-bottom");
      break;
 
      case 'flp_img 25':
-     $(imgClass[i]).addClass("hvr-wobble-skew");
+     jQuery(imgClass[i]).addClass("hvr-wobble-skew");
      break;
 
      case 'flp_img 26':
-     $(imgClass[i]).addClass("hvr-buzz");
+     jQuery(imgClass[i]).addClass("hvr-buzz");
      break;
 
      case 'flp_img 27':
-     $(imgClass[i]).addClass("hvr-buzz-out");
+     jQuery(imgClass[i]).addClass("hvr-buzz-out");
      break;
 
      case 'flp_img 28':
-     $(imgClass[i]).addClass("hvr-round-corners");
+     jQuery(imgClass[i]).addClass("hvr-round-corners");
      break;
 
      default:
@@ -129,126 +130,126 @@ switch(imgClass[i].attr("class")){
 }
 /*End of Add effects to the Image*/
 var titleClass = new Array();
-$(".flp_title").each(function(){
-titleClass.push($(this));
+jQuery(".flp_title").each(function(){
+titleClass.push(jQuery(this));
 });
 
 for(var i=0; i<titleClass.length; i++){
 switch(titleClass[i].attr("class")){
      case 'flp_title 0':
-     $(titleClass[i]).addClass("no-effect");
+     jQuery(titleClass[i]).addClass("no-effect");
      break;
 
      case 'flp_title 1':
-     $(titleClass[i]).addClass("hvr-grow");
+     jQuery(titleClass[i]).addClass("hvr-grow");
      break;
 
      case 'flp_title 2':
-     $(titleClass[i]).addClass("hvr-shrink");
+     jQuery(titleClass[i]).addClass("hvr-shrink");
      break;
 
      case 'flp_title 3':
-     $(titleClass[i]).addClass("hvr-pulse");
+     jQuery(titleClass[i]).addClass("hvr-pulse");
      break;
 
      case 'flp_title 4':
-     $(titleClass[i]).addClass("hvr-pulse-grow");
+     jQuery(titleClass[i]).addClass("hvr-pulse-grow");
      break;
 
      case 'flp_title 5':
-     $(titleClass[i]).addClass("hvr-pulse-shrink");
+     jQuery(titleClass[i]).addClass("hvr-pulse-shrink");
      break;
 
      case 'flp_title 6':
-     $(titleClass[i]).addClass("hvr-push");
+     jQuery(titleClass[i]).addClass("hvr-push");
      break;
 
      case 'flp_title 7':
-     $(titleClass[i]).addClass("hvr-pop");
+     jQuery(titleClass[i]).addClass("hvr-pop");
      break;
 
      case 'flp_title 8':
-     $(titleClass[i]).addClass("hvr-bounce-in");
+     jQuery(titleClass[i]).addClass("hvr-bounce-in");
      break;
 
      case 'flp_title 9':
-     $(titleClass[i]).addClass("hvr-bounce-out");
+     jQuery(titleClass[i]).addClass("hvr-bounce-out");
      break;
 
      case 'flp_title 10':
-     $(titleClass[i]).addClass("hvr-rotate");
+     jQuery(titleClass[i]).addClass("hvr-rotate");
      break;
 
      case 'flp_title 11':
-     $(titleClass[i]).addClass("hvr-grow-rotate");
+     jQuery(titleClass[i]).addClass("hvr-grow-rotate");
      break;
 
      case 'flp_title 12':
-     $(titleClass[i]).addClass("hvr-float");
+     jQuery(titleClass[i]).addClass("hvr-float");
      break;
 
      case 'flp_title 13':
-     $(titleClass[i]).addClass("hvr-sink");
+     jQuery(titleClass[i]).addClass("hvr-sink");
      break;
 
      case 'flp_title 14':
-     $(titleClass[i]).addClass("hvr-bob");
+     jQuery(titleClass[i]).addClass("hvr-bob");
      break;
 
      case 'flp_title 15':
-     $(titleClass[i]).addClass("hvr-hang");
+     jQuery(titleClass[i]).addClass("hvr-hang");
      break;
 
      case 'flp_title 16':
-     $(titleClass[i]).addClass("hvr-skew");
+     jQuery(titleClass[i]).addClass("hvr-skew");
      break;
 
      case 'flp_title 17':
-     $(titleClass[i]).addClass("hvr-skew-forward");
+     jQuery(titleClass[i]).addClass("hvr-skew-forward");
      break;
 
      case 'flp_title 18':
-     $(titleClass[i]).addClass("hvr-skew-backward");
+     jQuery(titleClass[i]).addClass("hvr-skew-backward");
      break;
 
      case 'flp_title 19':
-     $("#flp_title").addClass("hvr-wobble-horizontal");
+     jQuery("#flp_title").addClass("hvr-wobble-horizontal");
      break;
 
      case 'flp_title 20':
-     $(titleClass[i]).addClass("hvr-wobble-vertical");
+     jQuery(titleClass[i]).addClass("hvr-wobble-vertical");
      break;
 
      case 'flp_title 21':
-     $(titleClass[i]).addClass("hvr-wobble-to-bottom-right");
+     jQuery(titleClass[i]).addClass("hvr-wobble-to-bottom-right");
      break;
 
      case 'flp_title 22':
-     $(titleClass[i]).addClass("hvr-wobble-to-top-right");
+     jQuery(titleClass[i]).addClass("hvr-wobble-to-top-right");
      break;
 
      case 'flp_title 23':
-     $(titleClass[i]).addClass("hvr-wobble-top");
+     jQuery(titleClass[i]).addClass("hvr-wobble-top");
      break;
 
      case 'flp_title 24':
-     $(titleClass[i]).addClass("hvr-wobble-bottom");
+     jQuery(titleClass[i]).addClass("hvr-wobble-bottom");
      break;
 
      case 'flp_title 25':
-     $(titleClass[i]).addClass("hvr-wobble-skew");
+     jQuery(titleClass[i]).addClass("hvr-wobble-skew");
      break;
 
      case 'flp_title 26':
-     $(titleClass[i]).addClass("hvr-buzz");
+     jQuery(titleClass[i]).addClass("hvr-buzz");
      break;
 
      case 'flp_title 27': 
-     $(titleClass[i]).addClass("hvr-buzz-out");
+     jQuery(titleClass[i]).addClass("hvr-buzz-out");
      break;
 
      case 'flp_title 28':
-     $(titleClass[i]).addClass("hvr-round-corners");
+     jQuery(titleClass[i]).addClass("hvr-round-corners");
      break;
 
      default:
@@ -258,126 +259,126 @@ switch(titleClass[i].attr("class")){
 
 /*content Animation*/
 var contentClass = new Array();
-$(".flp_content").each(function(){
-contentClass.push($(this));
+jQuery(".flp_content").each(function(){
+contentClass.push(jQuery(this));
 });
 
 for(var i=0; i<contentClass.length; i++){
 switch(contentClass[i].attr("class")){
      case 'flp_content 0':
-     $(contentClass[i]).addClass("no-effect");
+     jQuery(contentClass[i]).addClass("no-effect");
      break;
 
      case 'flp_content 1':
-     $(contentClass[i]).addClass("hvr-grow");
+     jQuery(contentClass[i]).addClass("hvr-grow");
      break;
 
      case 'flp_content 2':
-     $(contentClass[i]).addClass("hvr-shrink");
+     jQuery(contentClass[i]).addClass("hvr-shrink");
      break;
 
      case 'flp_content 3':
-     $(contentClass[i]).addClass("hvr-pulse");
+     jQuery(contentClass[i]).addClass("hvr-pulse");
      break;
 
      case 'flp_content 4':
-     $(contentClass[i]).addClass("hvr-pulse-grow");
+     jQuery(contentClass[i]).addClass("hvr-pulse-grow");
      break;
 
      case 'flp_content 5':
-     $(contentClass[i]).addClass("hvr-pulse-shrink");
+     jQuery(contentClass[i]).addClass("hvr-pulse-shrink");
      break;
 
      case 'flp_content 6':
-     $(contentClass[i]).addClass("hvr-push");
+     jQuery(contentClass[i]).addClass("hvr-push");
      break;
 
      case 'flp_content 7':
-     $(contentClass[i]).addClass("hvr-pop");
+     jQuery(contentClass[i]).addClass("hvr-pop");
      break;
 
      case 'flp_content 8':
-     $(contentClass[i]).addClass("hvr-bounce-in");
+     jQuery(contentClass[i]).addClass("hvr-bounce-in");
      break;
 
      case 'flp_content 9':
-     $(contentClass[i]).addClass("hvr-bounce-out");
+     jQuery(contentClass[i]).addClass("hvr-bounce-out");
      break;
 
      case 'flp_content 10':
-     $(contentClass[i]).addClass("hvr-rotate");
+     jQuery(contentClass[i]).addClass("hvr-rotate");
      break;
 
      case 'flp_content 11':
-     $(contentClass[i]).addClass("hvr-grow-rotate");
+     jQuery(contentClass[i]).addClass("hvr-grow-rotate");
      break;
 
      case 'flp_content 12':
-     $(contentClass[i]).addClass("hvr-float");
+     jQuery(contentClass[i]).addClass("hvr-float");
      break;
 
      case 'flp_content 13':
-     $(contentClass[i]).addClass("hvr-sink");
+     jQuery(contentClass[i]).addClass("hvr-sink");
      break;
 
      case 'flp_content 14':
-     $(contentClass[i]).addClass("hvr-bob");
+     jQuery(contentClass[i]).addClass("hvr-bob");
      break;
 
      case 'flp_content 15':
-     $(contentClass[i]).addClass("hvr-hang");
+     jQuery(contentClass[i]).addClass("hvr-hang");
      break;
 
      case 'flp_content 16':
-     $(contentClass[i]).addClass("hvr-skew");
+     jQuery(contentClass[i]).addClass("hvr-skew");
      break;
 
      case 'flp_content 17':
-     $(contentClass[i]).addClass("hvr-skew-forward");
+     jQuery(contentClass[i]).addClass("hvr-skew-forward");
      break;
 
      case 'flp_content 18':
-     $(contentClass[i]).addClass("hvr-skew-backward");
+     jQuery(contentClass[i]).addClass("hvr-skew-backward");
      break;
 
      case 'flp_content 19':
-     $(contentClass[i]).addClass("hvr-wobble-horizontal");
+     jQuery(contentClass[i]).addClass("hvr-wobble-horizontal");
      break;
 
      case 'flp_content 20':
-     $(contentClass[i]).addClass("hvr-wobble-vertical");
+     jQuery(contentClass[i]).addClass("hvr-wobble-vertical");
      break;
 
      case 'flp_content 21':
-     $(contentClass[i]).addClass("hvr-wobble-to-bottom-right");
+     jQuery(contentClass[i]).addClass("hvr-wobble-to-bottom-right");
      break;
 
      case 'flp_content 22':
-     $(contentClass[i]).addClass("hvr-wobble-to-top-right");
+     jQuery(contentClass[i]).addClass("hvr-wobble-to-top-right");
      break;
 
      case 'flp_content 23':
-     $(contentClass[i]).addClass("hvr-wobble-top");
+     jQuery(contentClass[i]).addClass("hvr-wobble-top");
      break;
 
      case 'flp_content 24':
-     $(contentClass[i]).addClass("hvr-wobble-bottom");
+     jQuery(contentClass[i]).addClass("hvr-wobble-bottom");
      break;
 
      case 'flp_content 25':
-     $(contentClass[i]).addClass("hvr-wobble-skew");
+     jQuery(contentClass[i]).addClass("hvr-wobble-skew");
      break;
 
      case 'flp_content 26':
-     $(contentClass[i]).addClass("hvr-buzz");
+     jQuery(contentClass[i]).addClass("hvr-buzz");
      break;
 
      case 'flp_content 27': 
-     $(contentClass[i]).addClass("hvr-buzz-out");
+     jQuery(contentClass[i]).addClass("hvr-buzz-out");
      break;
 
      case 'flp_content 28':
-     $(contentClass[i]).addClass("hvr-round-corners");
+     jQuery(contentClass[i]).addClass("hvr-round-corners");
      break;
 
      default:
@@ -387,126 +388,126 @@ switch(contentClass[i].attr("class")){
 
 /*Start Button Animation*/
 var buttonClass = new Array();
-$(".flp_button").each(function(){
-buttonClass.push($(this));
+jQuery(".flp_button").each(function(){
+buttonClass.push(jQuery(this));
 });
 
 for(var i=0; i<buttonClass.length; i++){
 switch(buttonClass[i].attr("class")){
      case 'flp_button 0':
-     $(buttonClass[i]).addClass("no-effect");
+     jQuery(buttonClass[i]).addClass("no-effect");
      break;
 
      case 'flp_button 1':
-     $(buttonClass[i]).addClass("hvr-grow");
+     jQuery(buttonClass[i]).addClass("hvr-grow");
      break;
  
      case 'flp_button 2':
-     $(buttonClass[i]).addClass("hvr-shrink");
+     jQuery(buttonClass[i]).addClass("hvr-shrink");
      break;
 
      case 'flp_button 3':
-     $(buttonClass[i]).addClass("hvr-pulse");
+     jQuery(buttonClass[i]).addClass("hvr-pulse");
      break;
 
      case 'flp_button 4':
-     $(buttonClass[i]).addClass("hvr-pulse-grow");
+     jQuery(buttonClass[i]).addClass("hvr-pulse-grow");
      break;
 
      case 'flp_button 5':
-     $(buttonClass[i]).addClass("hvr-pulse-shrink");
+     jQuery(buttonClass[i]).addClass("hvr-pulse-shrink");
      break;
 
      case 'flp_button 6':
-     $(buttonClass[i]).addClass("hvr-push");
+     jQuery(buttonClass[i]).addClass("hvr-push");
      break;
 
      case 'flp_button 7':
-     $(buttonClass[i]).addClass("hvr-pop");
+     jQuery(buttonClass[i]).addClass("hvr-pop");
      break;
 
      case 'flp_button 8':
-     $(buttonClass[i]).addClass("hvr-bounce-in");
+     jQuery(buttonClass[i]).addClass("hvr-bounce-in");
      break;
 
      case 'flp_button 9':
-     $(buttonClass[i]).addClass("hvr-bounce-out");
+     jQuery(buttonClass[i]).addClass("hvr-bounce-out");
      break;
 
      case 'flp_button 10':
-     $(buttonClass[i]).addClass("hvr-rotate");
+     jQuery(buttonClass[i]).addClass("hvr-rotate");
      break;
 
      case 'flp_button 11':
-     $(buttonClass[i]).addClass("hvr-grow-rotate");
+     jQuery(buttonClass[i]).addClass("hvr-grow-rotate");
      break;
 
      case 'flp_button 12':
-     $(buttonClass[i]).addClass("hvr-float");
+     jQuery(buttonClass[i]).addClass("hvr-float");
      break;
 
      case 'flp_button 13':
-     $(buttonClass[i]).addClass("hvr-sink");
+     jQuery(buttonClass[i]).addClass("hvr-sink");
      break;
 
      case 'flp_button 14':
-     $(buttonClass[i]).addClass("hvr-bob");
+     jQuery(buttonClass[i]).addClass("hvr-bob");
      break;
 
      case 'flp_button 15':
-     $(buttonClass[i]).addClass("hvr-hang");
+     jQuery(buttonClass[i]).addClass("hvr-hang");
      break;
 
      case 'flp_button 16':
-     $(buttonClass[i]).addClass("hvr-skew");
+     jQuery(buttonClass[i]).addClass("hvr-skew");
      break;
 
      case 'flp_button 17':
-     $(buttonClass[i]).addClass("hvr-skew-forward");
+     jQuery(buttonClass[i]).addClass("hvr-skew-forward");
      break;
 
      case 'flp_button 18':
-     $(buttonClass[i]).addClass("hvr-skew-backward");
+     jQuery(buttonClass[i]).addClass("hvr-skew-backward");
      break;
 
      case 'flp_button 19':
-     $(buttonClass[i]).addClass("hvr-wobble-horizontal");
+     jQuery(buttonClass[i]).addClass("hvr-wobble-horizontal");
      break;
 
      case 'flp_button 20':
-     $(buttonClass[i]).addClass("hvr-wobble-vertical");
+     jQuery(buttonClass[i]).addClass("hvr-wobble-vertical");
      break;
 
      case 'flp_button 21':
-     $(buttonClass[i]).addClass("hvr-wobble-to-bottom-right");
+     jQuery(buttonClass[i]).addClass("hvr-wobble-to-bottom-right");
      break;
 
      case 'flp_button 22':
-     $(buttonClass[i]).addClass("hvr-wobble-to-top-right");
+     jQuery(buttonClass[i]).addClass("hvr-wobble-to-top-right");
      break;
 
      case 'flp_button 23':
-     $(buttonClass[i]).addClass("hvr-wobble-top");
+     jQuery(buttonClass[i]).addClass("hvr-wobble-top");
      break;
 
      case 'flp_button 24':
-     $(buttonClass[i]).addClass("hvr-wobble-bottom");
+     jQuery(buttonClass[i]).addClass("hvr-wobble-bottom");
      break;
 
      case 'flp_button 25':
-     $(buttonClass[i]).addClass("hvr-wobble-skew");
+     jQuery(buttonClass[i]).addClass("hvr-wobble-skew");
      break;
 
      case 'flp_button 26':
-     $(buttonClass[i]).addClass("hvr-buzz");
+     jQuery(buttonClass[i]).addClass("hvr-buzz");
      break;
 
      case 'flp_button 27': 
-     $(buttonClass[i]).addClass("hvr-buzz-out");
+     jQuery(buttonClass[i]).addClass("hvr-buzz-out");
      break;
 
      case 'flp_button 28':
-     $(buttonClass[i]).addClass("hvr-round-corners");
+     jQuery(buttonClass[i]).addClass("hvr-round-corners");
      break;
 
      default:
@@ -515,14 +516,14 @@ switch(buttonClass[i].attr("class")){
 /*End Button Animation*/
 /*Post Aligment*/
 var containerWidth = new Array();
-$(".flp_latest_post").each(function(){
-containerWidth.push($(this));
+jQuery(".flp_latest_post").each(function(){
+containerWidth.push(jQuery(this));
 });
 
 for(var i=0; i<containerWidth.length; i++){
 
 if(containerWidth[i].width() >= 800){
-$(containerWidth[i]).addClass("horizontal");
+jQuery(containerWidth[i]).addClass("horizontal");
 }
 }
 
@@ -531,72 +532,72 @@ $(containerWidth[i]).addClass("horizontal");
 /*CSS changes and Colors*/
 /*title Color*/
 var titleColor = new Array();
-$('.titleColor').each(function(){
-titleColor.push($(this));
+jQuery('.titleColor').each(function(){
+titleColor.push(jQuery(this));
 });
 
 var titleColorSelector = new Array();
-$('.flp_title a').each(function(){
-titleColorSelector.push($(this));
+jQuery('.flp_title a').each(function(){
+titleColorSelector.push(jQuery(this));
 });
 
 for(var i = 0; i<titleColorSelector.length; i++){
-$(titleColorSelector[i]).css("color", "#"+titleColor[i].html());
+jQuery(titleColorSelector[i]).css("color", "#"+titleColor[i].html());
 }
 /*End Title Color*/
 
 /*Content Color*/
 var contentColor = new Array();
-$('.contentColor').each(function(){
-contentColor.push($(this));
+jQuery('.contentColor').each(function(){
+contentColor.push(jQuery(this));
 });
 
 var contentColorSelector = new Array();
-$(".flp_content p").each(function(){
-contentColorSelector.push($(this));
+jQuery(".flp_content p").each(function(){
+contentColorSelector.push(jQuery(this));
 });
 
 for(var i=0; i<contentColorSelector.length; i++){
-$(contentColorSelector[i]).css("color", "#"+contentColor[i].html());
+jQuery(contentColorSelector[i]).css("color", "#"+contentColor[i].html());
 }
 /*End content Color*/
 
 /*Button Color*/
 var buttonColor = new Array();
-$(".buttonColor").each(function(){
-buttonColor.push($(this));
+jQuery(".buttonColor").each(function(){
+buttonColor.push(jQuery(this));
 });
 
 var buttonColorSelector = new Array();
-$(".flp_button").each(function(){
-buttonColorSelector.push($(this));
+jQuery(".flp_button").each(function(){
+buttonColorSelector.push(jQuery(this));
 });
 
 for(var i=0; i<buttonColorSelector.length; i++){
-$(buttonColorSelector[i]).css("color", "#"+buttonColor[i].html());
-$(buttonColorSelector[i]).css("border-color", "#"+buttonColor[i].html());
+jQuery(buttonColorSelector[i]).css("color", "#"+buttonColor[i].html());
+jQuery(buttonColorSelector[i]).css("border-color", "#"+buttonColor[i].html());
 }
 /*End of Button Color*/
 
 /*Border Color*/
 var borderColor = new Array();
-$('.borderColor').each(function(){
-borderColor.push($(this));
+jQuery('.borderColor').each(function(){
+borderColor.push(jQuery(this));
 });
 
 var borderColorSelector = new Array();
-$(".flp_post").each(function(){
-borderColorSelector.push($(this));
+jQuery(".flp_post").each(function(){
+borderColorSelector.push(jQuery(this));
 });
 
 for(var i=0; i<borderColorSelector.length; i++){
-$(borderColorSelector[i]).css("border-color", "#"+borderColor[i].html());
+jQuery(borderColorSelector[i]).css("border-color", "#"+borderColor[i].html());
 }
 /*End of Border Color*/
 /*End of CSS changes and colors*/
 
 /*Hidding the div with the color fields*/
-$(".flp_hidden_fields").hide();
+jQuery(".flp_hidden_fields").hide();
 /*End of the hidden fields*/
 
 });

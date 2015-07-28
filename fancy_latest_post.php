@@ -37,18 +37,18 @@ function flp_stylesheet() {
 }
 
 /*JS/Jquery*/
-add_action( 'wp_enqueue_scripts', 'flp_js', 20);
+add_action( 'wp_enqueue_scripts', 'flp_js');
 function flp_js(){
-       wp_enqueue_script( 'jquery-min', plugins_url('/js/jquery-2.1.4.min.js', __FILE__), null, null, false); 
+       //wp_enqueue_script( 'jquery-min', plugins_url('/js/jquery-2.1.4.min.js', __FILE__), null, null, false); 
        wp_enqueue_script( 'flp_effects', plugins_url('/js/flp_effects.js', __FILE__), null, null, true);
 	
 }
 
 /*Admin Script and Style*/
-add_action ( 'admin_enqueue_scripts', 'admin_scripts', 20);
+add_action ( 'admin_enqueue_scripts', 'admin_scripts');
 function admin_scripts(){
 	wp_enqueue_style( 'flp_css_admin', plugins_url('/css/flp_admin_style.css', __FILE__) );
-	wp_enqueue_script( 'jquery-min', plugins_url('/js/jquery-2.1.4.min.js', __FILE__), null, null, false);
+	//wp_enqueue_script( 'jquery-min', plugins_url('/js/jquery-2.1.4.min.js', __FILE__), null, null, false);
 	wp_enqueue_script( 'js-color', plugins_url('/jscolor/jscolor.js', __FILE__), null, null, false);
       	wp_enqueue_script( 'flp_admin', plugins_url('/js/flp_admin.js', __FILE__), null, null, true);
 }
