@@ -4,7 +4,7 @@ Tags: latest, post, fancy, post widget, post sidebar, post effects, latest posts
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7P44PGGFVKR6U
 Requires at least: 3.4
 Tested up to: 4.2.3
-Stable tag: 1.3.6
+Stable tag: 1.3.7
 License: GPLv2
 
 Display the latest post with Animated effects in your sidebar or content, select an animation effect for the Thumbnail, Title, Content and Read More.
