@@ -5,7 +5,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 
 	function __construct() {
 	parent::__construct(
-		'Fancy_Lates_Post_Widget', // Base ID
+		'Fancy_Latest_Post_Widget', // Base ID
 		'Fancy Latest Post Widget', // Name
 		array('description' => __( 'Display the latest post of your website with a modern layout'))
 	   );
@@ -16,6 +16,8 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		$instance = $old_instance;
 		$instance['title'] = strip_tags($new_instance['title']);
 		$instance['numberOfPost'] = strip_tags($new_instance['numberOfPost']);
+		$instance['excludePost'] = esc_sql($new_instance['excludePost']);
+		$instance['excludeCat'] = esc_sql($new_instance['excludeCat']);
 		$instance['readMoreText'] = strip_tags($new_instance['readMoreText']);
 		$instance['excerptLength'] = strip_tags($new_instance['excerptLength']);
 		$instance['showExcerpt'] = $new_instance['showExcerpt'];
@@ -35,6 +37,8 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 	if( $instance) {
 		$title = esc_attr($instance['title']);
 		$numberOfPost = esc_attr($instance['numberOfPost']);
+		$excludePost = esc_attr($instance['excludePost']);
+		$excludeCat = esc_attr($instance['excludeCat']);
 		$readMoreText = esc_attr($instance['readMoreText']);
 		$excerptLength = esc_attr($instance['excerptLength']);
 		$showExcerpt = esc_attr($instance['showExcerpt']);
@@ -50,6 +54,8 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 	} else {
 		$title = '';
 		$numberOfPost = '';
+		$excludePost = '';
+		$excludeCat = '';
                 $excerpt_Limit = '';
 		$readMoreText = '';
 		$excerptLength = '';
@@ -87,6 +93,14 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 			<?php endfor;?>
 		</select>
                 </p>
+		<p class="flp_exclude_post">
+		<label for="<?php echo $this->get_field_id('excludePost'); ?>"><?php _e('Exclude post by ID(comma separated)', 'Fancy_Lates_Post_Widget'); ?></label>
+		<input class="widefat" id="<?php echo $this->get_field_id('excludePost'); ?>" name="<?php echo $this->get_field_name('excludePost'); ?>" type="text" value="<?php echo $excludePost; ?>" />
+		</p>
+		<p class="flp_exclude_cat">
+		<label for="<?php echo $this->get_field_id('excludeCat'); ?>"><?php _e('Exclude Category by ID(comma separated)', 'Fancy_Lates_Post_Widget'); ?></label>
+		<input class="widefat" id="<?php echo $this->get_field_id('excludeCat'); ?>" name="<?php echo $this->get_field_name('excludeCat'); ?>" type="text" value="<?php echo $excludeCat; ?>" />
+		</p>
 		<p class="flp_show-excerpt">
 		<label for="<?php echo $this->get_field_id('showExcerpt'); ?>"><?php _e('Show Excerpt: ', 'Fancy_Lates_Post_Widget'); ?></label>
 		<input class="show" id="<?php echo $this->get_field_id('showExcerpt'); ?>" name="<?php echo $this->get_field_name('showExcerpt'); ?>" type="checkbox" <?php checked($instance['showExcerpt'], 'on'); ?>/>
@@ -144,7 +158,7 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		</select>
                 </p>
 		</div>
-		<div class="anim_section">
+		<div class="css_section">
                 <center><h3>STYLING SETTINGS</h3></center>
 		<p class="flp_title_color">
 		<label for="<?php echo $this->get_field_id('titleColor'); ?>"><?php _e('Post Title Color:', 'Fancy_Lates_Post_Widget'); ?></label><br>
@@ -174,6 +188,8 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		extract( $args );
 		$title = apply_filters('widget_title', $instance['title']);
 		$numberOfPost = $instance['numberOfPost'];
+		$excludePost = $instance['excludePost'];
+		$excludeCat = $instance['excludeCat'];
                 $readMoreText = $instance['readMoreText'];
 		$excerptLength = $instance['excerptLength'];
 		$showExcerpt = $instance['showExcerpt']? 'true' : 'false';
@@ -190,16 +206,18 @@ class Fancy_Lates_Post_Widget extends WP_Widget
 		if ( $title ) {
 			echo $before_title . $title . $after_title;
 		}
-		$this->getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt,$showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor, $customCSS);
+		$this->getFancyLatestPost($numberOfPost, $excludePost, $excludeCat ,$readMoreText, $excerptLength, $showExcerpt,$showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor, $customCSS);
                 echo $after_widget;
 	}
 
 
 
-	function getFancyLatestPost($numberOfPost, $readMoreText, $excerptLength, $showExcerpt, $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor, $customCSS) { //html
+	function getFancyLatestPost($numberOfPost, $excludePost, $excludeCat , $readMoreText, $excerptLength, $showExcerpt, $showImageAnim, $showTitleAnim, $showContentAnim, $showButtonAnim, $titleColor, $contentColor, $buttonColor, $borderColor, $customCSS) { //html
 		global $post;
+		$post_exclude = explode(",",$excludePost);
+                $cat_exclude = explode(",",  $excludeCat);
 		$flp_post = new WP_Query();
-		$flp_post->query('post_type=post&posts_per_page=' . $numberOfPost );	
+		$flp_post->query(array('post_type'=>'post', 'posts_per_page' => $numberOfPost, 'post__not_in' => $post_exclude, 'category__not_in' =>  $cat_exclude) );	
 		if($flp_post->found_posts > 0) { ?>
 			<div class="flp_latest_post featured-content" id="flp_post_container">
 				<?php while ($flp_post->have_posts()) { $flp_post->the_post(); ?>

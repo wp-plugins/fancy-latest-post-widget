@@ -4,7 +4,7 @@ Tags: latest, post, fancy, post widget, post sidebar, post effects, latest posts
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7P44PGGFVKR6U
 Requires at least: 3.4
 Tested up to: 4.2.3
-Stable tag: 1.3.7
+Stable tag: 1.3.9
 License: GPLv2
 
 Display the latest post with Animated effects in your sidebar or content, select an animation effect for the Thumbnail, Title, Content and Read More.
@@ -38,6 +38,8 @@ Implement<br>
 <img src="http://i.imgur.com/nIZFVeW.png"></img><br>
 
 == Changelog ==
+version 1.3.9: Added the option to exclude post and categories by ID, also configured the backend layout to use less vertical space.<br>
+
 version 1.3.7: Fixed the jQuery conflicts with the themes and other plugins.<br>
 
 version 1.2.6: Added a custom CSS area, removed the Aligment dropdown and added a smart screen width detector to display 1, 2 or 4 post per row depending of the space available<br>
